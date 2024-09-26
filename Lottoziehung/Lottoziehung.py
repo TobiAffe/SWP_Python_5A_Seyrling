@@ -11,7 +11,7 @@ def lottoziehung(length, how_many):
         lotto[-i] = val_ran
     return lotto[:how_many]
 
-def lotto_statisik(length, how_many, count):
+def lotto_statistik(length, how_many, count):
     statistik = {}
     for key in range(1, length + 1):
         statistik[key] = 0
@@ -22,5 +22,5 @@ def lotto_statisik(length, how_many, count):
 
     return statistik
 
-statistik = lotto_statisik(1000,45, 6)
+statistik = lotto_statistik(1000, 45, 6)
 print(statistik)
