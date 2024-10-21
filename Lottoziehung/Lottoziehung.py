@@ -4,8 +4,9 @@ def lottoziehung(length, how_many):
     for i in range(1, length + 1):
         lotto.append(i)
 
-    for i in range(len(lotto)):
-        ran = random.randint(0, length-i-1)
+    list_range = range(0, len(lotto))
+    for i in list_range:
+        ran = random.randint(list_range[0], list_range[-1])
         lotto[ran], lotto[-i] = lotto[-i], lotto[ran]
     return lotto[-how_many:]
 
@@ -19,5 +20,5 @@ def lotto_statistik(length, how_many, count):
             statistik[j] += 1
     return statistik
 
-statistik = lotto_statistik(45, 6, 1)
+statistik = lotto_statistik(45, 6, 10000)
 print(statistik)
